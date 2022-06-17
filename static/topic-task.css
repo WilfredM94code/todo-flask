@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    box-align: center;
+}
+
+body {
+    background-image: linear-gradient(to left, #27c0f7, #ff6161);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: auto;
+    width: 55%;
+    height: 50%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+.content {
+    background-color: rgba(0, 255, 255, 0.25);
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 1px 1px white;
+}
+
+.data, .block-header, .block-title, .delete-button, .task {
+    display: flex;
+    flex: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    align-items: center;
+    margin: 10px;}
+    .list-item{
+        padding: 5px;
+    }
+
+.block-header, .block-title {
+    align-items: center
+}
+
+.delete-form {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+li {
+    background-color: rgba(255, 255, 255, 0.25);
+    padding: 5px;
+}
+
+.list-item {
+    margin: 5px;
+    width: 80%;
+}
+
+.task-list, .task {
+    padding: 5px;
+    margin: 5px;
+}
+
+.block{
+    overflow: hidden;
+}
+
+.delete-button, .add-task-inp, .add-task-button {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    transition: all 0.125s ease-in-out;
+    box-shadow: 1px 1px rgba(0, 221, 255, 0.54);
+    margin: 5px;
+}
+
+.delete-button:hover, .add-task-inp:hover ,.add-task-button:hover {
+    box-shadow: 1px 1px white;
+}

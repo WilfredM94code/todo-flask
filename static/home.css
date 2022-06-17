@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    box-align: center;
+}
+
+body {
+    background-image: linear-gradient(to left, #27c0f7, #ff6161);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: auto;
+    width: 55%;
+    height: 50%;
+    margin-top: 10%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.topic-list {
+    list-style-type: none;
+    list-style-position: inside;
+    padding: 5px;
+}
+
+li {
+    background-color: rgba(255, 255, 255, 0.25);
+    padding: 5px;
+}
+
+.add-block, .block {
+    margin: 15px;
+    margin-top: auto;
+    margin-bottom: auto
+}
+
+.content {
+    background-color: rgba(0, 255, 255, 0.25);
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 1px 1px white;
+}
+
+.data {
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+}
+
+.add-block {
+    width: 40%; 
+    float: right;
+    display: inline-flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    vertical-align: middle;
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.title {
+    display: flex;
+    flex: auto;
+}
+
+.block {
+    margin-left: 10px;
+    display: flex;
+    width: 80%;
+    margin-right: 10px;
+    vertical-align: middle;
+    position: relative;
+}
+
+.topic-list {
+    width: 100%
+}
+
+.add-topic {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    transition: all 0.125s ease-in-out;
+    box-shadow: 1px 1px rgba(0, 221, 255, 0.54);
+}
+
+.add-topic-submit-button {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    transition: all 0.125s ease-in-out;
+    box-shadow: 1px 1px rgba(0, 221, 255, 0.54);
+}
+
+.add-topic-submit {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    transition: all 0.125s ease-in-out;
+    margin-top: 5px;
+}
+
+.add-topic-submit-button:hover, .add-topic:hover {
+    box-shadow: 1px 1px white;
+}
+
+
+.list-item {
+    margin: 5px;
+}
+
+.form-title {
+    margin: auto;
+}
+
+.header-content {
+    height: 100%;
+}
+
+.block-title {
+    margin: 15px;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/topic-task.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+        <a href="/">Home</a>
+        <h1>To do list</h1>
+        <div class="data">
+            <div class="block">
+                <div class="block-header">
+                    <h2 class="block-title">Work list - {{ topic.title }}</h2>
+                    <form action="/delete/topic/{{ topic.topic_id }}" method="POST">
+                        <input type="submit" value="Delete Topic" class="delete-button">
+                    </form>
+                </div>
+                <ul class="task-list">
+                    {% for task in tasks %}
+                    <div class="task">
+                        <li class="list-item">{{ task.description }}</a></li>
+                            <form action="/delete/task/{{ task.task_id }}" method="POST" class="delete-form">
+                                <input type="submit" value="Delete Task" class="delete-button">
+                            </form>
+                    </div>
+                    {% endfor %}
+                </ul>
+            </div>
+            <form action="/add/task/{{ topic.topic_id }}" method="POST" class="new-task">
+                <h2 class="form-title">Add new task</h2>
+                <div class="add-task">
+                    <label for="task-name"></label>
+                    <input type="text" class="add-task-inp" name="task-description">
+                </div>
+                <input type="submit" value="Add task" class="add-task-button">
+            </form>
+        </div>
+        <div class="message">
+            {% for message in get_flashed_messages() %}
+            <div>{{ message }}</div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

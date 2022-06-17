@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/home.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class = 'title'>To do list</h1>
+    <div class="content">
+        <div class="header-content">
+            <h2 class="block-title">Work list</h2>
+        </div>
+        <div class="data">
+            <div class="block">
+                <ul class="topic-list">
+                    {% for topic in topics %}
+                    <li class="list-item"><a class="item-list-link" href="/topic/{{ topic.topic_id }}">{{ topic.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="add-block">
+                <form action="add/topic" method="POST" class="new-task">
+                    <h2 class="form-title">Add new work</h2>
+                    <div class="add-topic">
+                        <label for="topic-name"></label>
+                        <input type="text" class= "add-topic" name="topic-title">
+                    </div>
+                    <div class="add-topic-submit">
+                        <input type="submit" value="Add topic" class="add-topic-submit-button">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="message">
+            {% for message in get_flashed_messages() %}
+            <div>{{ message }}</div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
